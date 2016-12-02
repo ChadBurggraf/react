@@ -23,7 +23,6 @@ type ReactNativeBaseComponentViewConfig = {
 
 /**
  * @param {string} config iOS View configuration.
- * @private
  */
 var createReactNativeComponentClass = function(
   viewConfig: ReactNativeBaseComponentViewConfig

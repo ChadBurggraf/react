@@ -30,7 +30,6 @@ var eventQueue = null;
  *
  * @param {?object} event Synthetic event to be dispatched.
  * @param {boolean} simulated If the event is simulated (changes exn behavior)
- * @private
  */
 var executeDispatchesAndRelease = function(event, simulated) {
   if (event) {
@@ -92,8 +91,6 @@ function shouldPreventMouseEvent(name, type, props) {
  *     default, the listener is simply invoked.
  *
  * Each plugin that is injected into `EventsPluginHub` is immediately operable.
- *
- * @public
  */
 var EventPluginHub = {
 
@@ -104,7 +101,6 @@ var EventPluginHub = {
 
     /**
      * @param {array} InjectedEventPluginOrder
-     * @public
      */
     injectEventPluginOrder: EventPluginRegistry.injectEventPluginOrder,
 

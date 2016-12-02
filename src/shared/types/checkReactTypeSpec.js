@@ -45,7 +45,6 @@ var loggedTypeFailures = {};
  * @param {string} componentName Name of the component for error messages.
  * @param {?object} element The React element that is being type-checked
  * @param {?number} debugID The React component instance that is being type-checked
- * @private
  */
 function checkReactTypeSpec(
   typeSpecs,

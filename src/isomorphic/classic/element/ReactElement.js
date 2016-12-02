@@ -373,7 +373,6 @@ ReactElement.cloneElement = function(element, config, children) {
  * See https://facebook.github.io/react/docs/react-api.html#isvalidelement
  * @param {?object} object
  * @return {boolean} True if `object` is a valid component.
- * @final
  */
 ReactElement.isValidElement = function(object) {
   return (

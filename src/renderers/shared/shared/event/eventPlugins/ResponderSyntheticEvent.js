@@ -28,7 +28,6 @@ var ResponderEventInterface = {
  * @param {object} dispatchConfig Configuration used to dispatch this event.
  * @param {string} dispatchMarker Marker identifying the event target.
  * @param {object} nativeEvent Native event.
- * @extends {SyntheticEvent}
  */
 function ResponderSyntheticEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget) {
   return SyntheticEvent.call(this, dispatchConfig, dispatchMarker, nativeEvent, nativeEventTarget);

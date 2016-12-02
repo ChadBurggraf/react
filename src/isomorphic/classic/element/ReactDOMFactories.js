@@ -15,8 +15,6 @@ var ReactElement = require('ReactElement');
 
 /**
  * Create a factory that creates HTML tag elements.
- *
- * @private
  */
 var createDOMFactory = ReactElement.createFactory;
 if (__DEV__) {
@@ -27,8 +25,6 @@ if (__DEV__) {
 /**
  * Creates a mapping from supported HTML tags to `ReactDOMComponent` classes.
  * This is also accessible via `React.DOM`.
- *
- * @public
  */
 var ReactDOMFactories = {
   a: createDOMFactory('a'),

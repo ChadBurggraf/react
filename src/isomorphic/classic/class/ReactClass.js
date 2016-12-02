@@ -169,7 +169,6 @@ var ReactClassInterface: {[key: string]: SpecPolicy} = {
    *   }
    *
    * @return {ReactComponent}
-   * @nosideeffects
    * @required
    */
   render: 'DEFINE_ONCE',
@@ -621,7 +620,6 @@ function mergeIntoWithNoDuplicateKeys(one, two) {
  * @param {function} one Function to invoke first.
  * @param {function} two Function to invoke second.
  * @return {function} Function that invokes the two argument functions.
- * @private
  */
 function createMergedResultFunction(one, two) {
   return function mergedResult() {
@@ -645,7 +643,6 @@ function createMergedResultFunction(one, two) {
  * @param {function} one Function to invoke first.
  * @param {function} two Function to invoke second.
  * @return {function} Function that invokes the two argument functions.
- * @private
  */
 function createChainedFunction(one, two) {
   return function chainedFunction() {
@@ -737,8 +734,6 @@ var ReactClassMixin = {
   /**
    * Checks whether or not this composite component is mounted.
    * @return {boolean} True if mounted, false otherwise.
-   * @protected
-   * @final
    */
   isMounted: function() {
     return this.updater.isMounted(this);
@@ -765,7 +760,6 @@ var ReactClass = {
    *
    * @param {object} spec Class specification (which must define `render`).
    * @return {function} Component constructor function.
-   * @public
    */
   createClass: function(spec) {
     // To keep our warnings more understandable, we'll use a little hack here to

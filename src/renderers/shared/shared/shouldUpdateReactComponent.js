@@ -20,7 +20,6 @@
  * @param {?object} prevElement
  * @param {?object} nextElement
  * @return {boolean} True if the existing instance should be updated.
- * @protected
  */
 function shouldUpdateReactComponent(prevElement, nextElement) {
   var prevEmpty = prevElement === null || prevElement === false;

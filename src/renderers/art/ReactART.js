@@ -100,7 +100,6 @@ const ContainerMixin = assign({}, ReactMultiChild, {
    *
    * @param {ReactComponent} child Component to move.
    * @param {number} toIndex Destination index of the element.
-   * @protected
    */
   moveChild: function(child, afterNode, toIndex, lastIndex) {
     const childNode = child._mountImage;
@@ -112,7 +111,6 @@ const ContainerMixin = assign({}, ReactMultiChild, {
    *
    * @param {ReactComponent} child Component to create.
    * @param {object} childNode ART node to insert.
-   * @protected
    */
   createChild: function(child, afterNode, childNode) {
     child._mountImage = childNode;
@@ -123,7 +121,6 @@ const ContainerMixin = assign({}, ReactMultiChild, {
    * Removes a child component.
    *
    * @param {ReactComponent} child Child to remove.
-   * @protected
    */
   removeChild: function(child) {
     child._mountImage.eject();
@@ -144,7 +141,6 @@ const ContainerMixin = assign({}, ReactMultiChild, {
    * @param {?object} nextChildren.
    * @param {ReactReconcileTransaction} transaction
    * @internal
-   * @override {ReactMultiChild.updateChildren}
    */
   updateChildren: function(nextChildren, transaction, context) {
     this._updateChildren(nextChildren, transaction, context);

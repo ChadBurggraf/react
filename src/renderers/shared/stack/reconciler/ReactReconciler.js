@@ -34,7 +34,6 @@ var ReactReconciler = {
    * @param {?object} the containing host component instance
    * @param {?object} info about the host container
    * @return {?string} Rendered markup to be inserted into the DOM.
-   * @final
    * @internal
    */
   mountComponent: function(
@@ -86,7 +85,6 @@ var ReactReconciler = {
   /**
    * Releases any resources allocated by `mountComponent`.
    *
-   * @final
    * @internal
    */
   unmountComponent: function(internalInstance, safely, skipLifecycle) {

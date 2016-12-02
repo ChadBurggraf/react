@@ -215,7 +215,6 @@ var ReactNativeMount = {
    *
    * @param {ReactComponent} instance React component instance.
    * @param {string} containerID ID of container we're removing from.
-   * @final
    * @internal
    * @see {ReactNativeMount.unmountComponentAtNode}
    */

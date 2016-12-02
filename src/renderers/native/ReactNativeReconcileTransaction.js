@@ -73,8 +73,6 @@ function ReactNativeReconcileTransaction() {
 var Mixin = {
   /**
    * @see Transaction
-   * @abstract
-   * @final
    * @return {array<object>} List of operation wrap procedures.
    *   TODO: convert to array<TransactionWrapper>
    */

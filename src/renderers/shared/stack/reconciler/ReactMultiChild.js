@@ -28,7 +28,6 @@ var invariant = require('invariant');
  *
  * @param {string} markup Markup that renders into an element.
  * @param {number} toIndex Destination index.
- * @private
  */
 function makeInsertMarkup(markup, afterNode, toIndex) {
   // NOTE: Null values reduce hidden classes.
@@ -47,7 +46,6 @@ function makeInsertMarkup(markup, afterNode, toIndex) {
  *
  * @param {number} fromIndex Source index of the existing element.
  * @param {number} toIndex Destination index of the element.
- * @private
  */
 function makeMove(child, afterNode, toIndex) {
   // NOTE: Null values reduce hidden classes.
@@ -65,7 +63,6 @@ function makeMove(child, afterNode, toIndex) {
  * Make an update for removing an element at an index.
  *
  * @param {number} fromIndex Index of the element to remove.
- * @private
  */
 function makeRemove(child, node) {
   // NOTE: Null values reduce hidden classes.
@@ -83,7 +80,6 @@ function makeRemove(child, node) {
  * Make an update for setting the markup of a node.
  *
  * @param {string} markup Markup that renders into an element.
- * @private
  */
 function makeSetMarkup(markup) {
   // NOTE: Null values reduce hidden classes.
@@ -101,7 +97,6 @@ function makeSetMarkup(markup) {
  * Make an update for setting the text content.
  *
  * @param {string} textContent Text content to set.
- * @private
  */
 function makeTextContent(textContent) {
   // NOTE: Null values reduce hidden classes.
@@ -129,8 +124,6 @@ function enqueue(queue, update) {
 
 /**
  * Processes any enqueued updates.
- *
- * @private
  */
 function processQueue(inst, updateQueue) {
   ReactComponentEnvironment.processChildrenUpdates(
@@ -342,8 +335,6 @@ var ReactMultiChild = {
   /**
    * @param {?object} nextNestedChildrenElements Nested child element maps.
    * @param {ReactReconcileTransaction} transaction
-   * @final
-   * @protected
    */
   _updateChildren: function(nextNestedChildrenElements, transaction, context) {
     var prevChildren = this._renderedChildren;
@@ -447,7 +438,6 @@ var ReactMultiChild = {
    * @param {ReactComponent} child Component to move.
    * @param {number} toIndex Destination index of the element.
    * @param {number} lastIndex Last index visited of the siblings of `child`.
-   * @protected
    */
   moveChild: function(child, afterNode, toIndex, lastIndex) {
     // If the index of `child` is less than `lastIndex`, then it needs to
@@ -463,7 +453,6 @@ var ReactMultiChild = {
    *
    * @param {ReactComponent} child Component to create.
    * @param {string} mountImage Markup to insert.
-   * @protected
    */
   createChild: function(child, afterNode, mountImage) {
     return makeInsertMarkup(mountImage, afterNode, child._mountIndex);
@@ -473,7 +462,6 @@ var ReactMultiChild = {
    * Removes a child component.
    *
    * @param {ReactComponent} child Child to remove.
-   * @protected
    */
   removeChild: function(child, node) {
     return makeRemove(child, node);
@@ -488,7 +476,6 @@ var ReactMultiChild = {
    * @param {string} name Name of the child.
    * @param {number} index Index at which to insert the child.
    * @param {ReactReconcileTransaction} transaction
-   * @private
    */
   _mountChildAtIndex: function(
     child,
@@ -507,7 +494,6 @@ var ReactMultiChild = {
    * NOTE: This is part of `updateChildren` and is here for readability.
    *
    * @param {ReactComponent} child Component to unmount.
-   * @private
    */
   _unmountChild: function(child, node) {
     var update = this.removeChild(child, node);

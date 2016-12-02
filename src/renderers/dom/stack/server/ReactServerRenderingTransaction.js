@@ -49,8 +49,6 @@ function ReactServerRenderingTransaction(renderToStaticMarkup) {
 var Mixin = {
   /**
    * @see Transaction
-   * @abstract
-   * @final
    * @return {array} Empty list of operation wrap procedures.
    */
   getTransactionWrappers: function() {

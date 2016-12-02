@@ -98,7 +98,6 @@ var TransactionImpl = {
   _isInTransaction: false,
 
   /**
-   * @abstract
    * @return {Array<TransactionWrapper>} Array of transaction wrappers.
    */
   getTransactionWrappers: null,

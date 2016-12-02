@@ -32,7 +32,6 @@ var valuePropNames = ['value', 'defaultValue'];
 
 /**
  * Validation function for `value` and `defaultValue`.
- * @private
  */
 function checkSelectPropTypes(inst, props) {
   var owner = inst._currentElement._owner;
@@ -72,7 +71,6 @@ function checkSelectPropTypes(inst, props) {
  * @param {ReactDOMComponent} inst
  * @param {boolean} multiple
  * @param {*} propValue A stringable (with `multiple`, a list of stringables).
- * @private
  */
 function updateOptions(inst, multiple, propValue) {
   var options = ReactDOMComponentTree.getNodeFromInstance(inst).options;

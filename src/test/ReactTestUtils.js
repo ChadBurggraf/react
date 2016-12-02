@@ -121,7 +121,6 @@ function findAllInRenderedFiberTreeInternal(fiber, test) {
  *
  * Todo: Support the entire DOM.scry query syntax. For now, these simple
  * utilities will suffice for testing purposes.
- * @lends ReactTestUtils
  */
 var ReactTestUtils = {
   renderIntoDocument: function(element) {

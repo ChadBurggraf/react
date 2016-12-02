@@ -166,7 +166,6 @@ function batchedMountComponentIntoNode(
  *
  * @param {ReactComponent} instance React component instance.
  * @param {DOMElement} container DOM element to unmount from.
- * @final
  * @internal
  * @see {ReactMount.unmountComponentAtNode}
  */

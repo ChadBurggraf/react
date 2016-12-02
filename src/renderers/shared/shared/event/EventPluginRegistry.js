@@ -41,8 +41,6 @@ var namesToPlugins: NamesToPlugins = {};
 
 /**
  * Recomputes the plugin list using the injected plugins and plugin ordering.
- *
- * @private
  */
 function recomputePluginOrdering(): void {
   if (!eventPluginOrder) {
@@ -90,7 +88,6 @@ function recomputePluginOrdering(): void {
  * @param {object} dispatchConfig Dispatch configuration for the event.
  * @param {object} PluginModule Plugin publishing the event.
  * @return {boolean} True if the event was successfully published.
- * @private
  */
 function publishEventForPlugin(
   dispatchConfig: DispatchConfig,
@@ -134,7 +131,6 @@ function publishEventForPlugin(
  *
  * @param {string} registrationName Registration name to add.
  * @param {object} PluginModule Plugin publishing the event.
- * @private
  */
 function publishRegistrationName(
   registrationName: string,
@@ -294,7 +290,6 @@ var EventPluginRegistry = {
 
   /**
    * Exposed for unit testing.
-   * @private
    */
   _resetEventPlugins: function(): void {
     eventPluginOrder = null;

@@ -39,7 +39,6 @@
 // code copied and modified from escape-html
 /**
  * Module variables.
- * @private
  */
 
 var matchHtmlRegExp = /["'&<>]/;
@@ -49,7 +48,6 @@ var matchHtmlRegExp = /["'&<>]/;
  *
  * @param  {string} string The string to escape for inserting into HTML
  * @return {string}
- * @public
  */
 
 function escapeHtml(string) {

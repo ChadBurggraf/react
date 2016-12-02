@@ -673,7 +673,6 @@ ReactDOMComponent.Mixin = {
    * Iterating over object properties is faster than iterating over arrays.
    * @see http://jsperf.com/obj-vs-arr-iteration
    *
-   * @private
    * @param {ReactReconcileTransaction|ReactServerRenderingTransaction} transaction
    * @param {object} props
    * @return {string} Markup of opening tag.
@@ -732,7 +731,6 @@ ReactDOMComponent.Mixin = {
   /**
    * Creates markup for the content between the tags.
    *
-   * @private
    * @param {ReactReconcileTransaction|ReactServerRenderingTransaction} transaction
    * @param {object} props
    * @param {object} context
@@ -914,7 +912,6 @@ ReactDOMComponent.Mixin = {
    *       do not change for a given reconciliation.
    * TODO: Benchmark areas that can be improved with caching.
    *
-   * @private
    * @param {object} lastProps
    * @param {object} nextProps
    * @param {?DOMElement} node

@@ -82,8 +82,6 @@ var ReactUpdateQueue = {
    * Checks whether or not this composite component is mounted.
    * @param {ReactClass} publicInstance The instance we want to test.
    * @return {boolean} True if mounted, false otherwise.
-   * @protected
-   * @final
    */
   isMounted: function(publicInstance) {
     if (__DEV__) {

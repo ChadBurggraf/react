@@ -54,8 +54,6 @@ ReactComponent.prototype.isReactComponent = {};
  * @param {object|function} partialState Next partial state or function to
  *        produce next partial state to be merged with current state.
  * @param {?function} callback Called after state is updated.
- * @final
- * @protected
  */
 ReactComponent.prototype.setState = function(partialState, callback) {
   invariant(
@@ -82,8 +80,6 @@ ReactComponent.prototype.setState = function(partialState, callback) {
  * `componentWillUpdate` and `componentDidUpdate`.
  *
  * @param {?function} callback Called after update is complete.
- * @final
- * @protected
  */
 ReactComponent.prototype.forceUpdate = function(callback) {
   this.updater.enqueueForceUpdate(this);

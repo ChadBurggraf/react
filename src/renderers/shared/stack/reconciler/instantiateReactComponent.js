@@ -63,7 +63,6 @@ function isInternalComponentType(type) {
  * @param {ReactNode} node
  * @param {boolean} shouldHaveDebugID
  * @return {object} A new instance of the element's constructor.
- * @protected
  */
 function instantiateReactComponent(node, shouldHaveDebugID) {
   var instance;

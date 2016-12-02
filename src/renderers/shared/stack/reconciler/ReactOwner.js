@@ -23,7 +23,6 @@ import type { ReactInstance } from 'ReactInstanceType';
 /**
  * @param {?object} object
  * @return {boolean} True if `object` is a valid owner.
- * @final
  */
 function isValidOwner(object: any): boolean {
   return !!(
@@ -70,7 +69,6 @@ var ReactOwner = {
    * @param {ReactComponent} component Component to reference.
    * @param {string} ref Name by which to refer to the component.
    * @param {ReactOwner} owner Component on which to record the ref.
-   * @final
    * @internal
    */
   addComponentAsRefTo: function(
@@ -100,7 +98,6 @@ var ReactOwner = {
    * @param {ReactComponent} component Component to dereference.
    * @param {string} ref Name of the ref to remove.
    * @param {ReactOwner} owner Component on which the ref is recorded.
-   * @final
    * @internal
    */
   removeComponentAsRefFrom: function(

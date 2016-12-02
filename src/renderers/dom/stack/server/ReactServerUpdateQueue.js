@@ -51,8 +51,6 @@ class ReactServerUpdateQueue {
    * Checks whether or not this composite component is mounted.
    * @param {ReactClass} publicInstance The instance we want to test.
    * @return {boolean} True if mounted, false otherwise.
-   * @protected
-   * @final
    */
   isMounted(publicInstance: ReactComponent<any, any, any>): boolean {
     return false;

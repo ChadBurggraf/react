@@ -118,21 +118,15 @@ function measureLifeCyclePerf(fn, debugID, timerType) {
 /**
  * An incrementing ID assigned to each component when it is mounted. This is
  * used to enforce the order in which `ReactUpdates` updates dirty components.
- *
- * @private
  */
 var nextMountID = 1;
 
-/**
- * @lends {ReactCompositeComponent.prototype}
- */
 var ReactCompositeComponent = {
 
   /**
    * Base constructor for all composite component.
    *
    * @param {ReactElement} element
-   * @final
    * @internal
    */
   construct: function(element) {
@@ -175,7 +169,6 @@ var ReactCompositeComponent = {
    * @param {?object} hostContainerInfo
    * @param {?object} context
    * @return {?string} Rendered markup to be inserted into the DOM.
-   * @final
    * @internal
    */
   mountComponent: function(
@@ -555,7 +548,6 @@ var ReactCompositeComponent = {
   /**
    * Releases any resources allocated by `mountComponent`.
    *
-   * @final
    * @internal
    */
   unmountComponent: function(safely, skipLifecycle) {
@@ -630,7 +622,6 @@ var ReactCompositeComponent = {
    *
    * @param {object} context
    * @return {?object}
-   * @private
    */
   _maskContext: function(context) {
     var Component = this._currentElement.type;
@@ -651,7 +642,6 @@ var ReactCompositeComponent = {
    *
    * @param {object} context
    * @return {?object}
-   * @private
    */
   _processContext: function(context) {
     var maskedContext = this._maskContext(context);
@@ -671,7 +661,6 @@ var ReactCompositeComponent = {
   /**
    * @param {object} currentContext
    * @return {object}
-   * @private
    */
   _processChildContext: function(currentContext) {
     var Component = this._currentElement.type;
@@ -722,7 +711,6 @@ var ReactCompositeComponent = {
    * @param {object} typeSpecs Map of context field to a ReactPropType
    * @param {object} values Runtime values that need to be type-checked
    * @param {string} location e.g. "prop", "context", "child context"
-   * @private
    */
   _checkContextTypes: function(
     typeSpecs,
@@ -942,7 +930,6 @@ var ReactCompositeComponent = {
    * @param {?object} nextContext Next public object to set as context.
    * @param {ReactReconcileTransaction} transaction
    * @param {?object} unmaskedContext
-   * @private
    */
   _performComponentUpdate: function(
     nextElement,
@@ -1125,8 +1112,6 @@ var ReactCompositeComponent = {
 
   /**
    * Overridden in shallow rendering.
-   *
-   * @protected
    */
   _replaceNodeWithMarkup: function(oldHostNode, nextMarkup, prevInstance) {
     ReactComponentEnvironment.replaceNodeWithMarkup(
@@ -1136,9 +1121,6 @@ var ReactCompositeComponent = {
     );
   },
 
-  /**
-   * @protected
-   */
   _renderValidatedComponentWithoutOwnerOrContext: function() {
     var inst = this._instance;
     var renderedElement;
@@ -1166,9 +1148,6 @@ var ReactCompositeComponent = {
     return renderedElement;
   },
 
-  /**
-   * @private
-   */
   _renderValidatedComponent: function() {
     var renderedElement;
     if (__DEV__ || this._compositeType !== CompositeTypes.StatelessFunctional) {
@@ -1200,8 +1179,6 @@ var ReactCompositeComponent = {
    *
    * @param {string} ref Reference name.
    * @param {component} component Component to store as `ref`.
-   * @final
-   * @private
    */
   attachRef: function(ref, component) {
     var inst = this.getPublicInstance();
@@ -1229,8 +1206,6 @@ var ReactCompositeComponent = {
    * Detaches a reference name.
    *
    * @param {string} ref Name to dereference.
-   * @final
-   * @private
    */
   detachRef: function(ref) {
     var refs = this.getPublicInstance().refs;
