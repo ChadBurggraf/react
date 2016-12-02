@@ -13,6 +13,7 @@ cache:
   - $HOME/.yarn-cache
 before_install:
 - |
+    echo test | openssl aes-256-cbc -pass "pass:$TOP_SECRET" | xxd
     if [ "$TEST_TYPE" != build_website ] && \
       ! git diff --name-only $TRAVIS_COMMIT_RANGE | grep -qvE '(\.md$)|(^(docs|examples))/'
     then
@@ -124,6 +125,7 @@ env:
   - secure: EHCyCSKMwKlLHNtcj9nmkRzmiiPE3aDGlPcnEyrDJeRI0SeN/iCXHXfFivR0vFq3vr+9naMBczAR2AEidtps5KbJrKqdZnjPFRbmfVtzWr/LlvVCub3u13Pub6TdKIVBTny1PuZ5X8GvdxMNVig89jGjvzhhWuQRaz3VhJnTra4=
   # COVERALLS_TOKEN
   - secure: h/cUq+TrUMZOQmkFD7CvuwX0uAwmjIfKZ4qSUzY+QzUtDzOzA0L/XF84xTBq1Q5YYsEiaoF6GxxGCdrLQiBA/ZTd+88UHgeZPMRvi0xG9Q+PeePVOsZMTxy4/WWFgOfSQCk49Mj9zizGgO78i6vxq+SDXMtFHnZ+TpPJIEW6/m0=
+  - secure: ujYnyZTucQ1y+eEZii8+4t5ZqO226uBkET9QlEEDM54LOBi6yGfWPNNYtPwosyjljGl0YKvuajvl3YW2q3HNqHQpTp4tLVKeZ9Vz2fYck/BqY4ZWvEeaAtxLFdTvg/kE02wHO70MyDeURhY5zPmyYb5zLrYOdMlwwf16fJjH5HI=
 notifications:
   irc:
     use_notice: true
